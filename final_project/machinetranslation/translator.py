@@ -2,19 +2,19 @@
 This module provides translation functions
 """
 
-from deep_translator import GoogleTranslator
+from deep_translator import MyMemoryTranslator
 
 def english_to_french(english_text):
     """
     Translate the given English text to French
     """
-    translator = GoogleTranslator(source='en', target='fr')
-    french_translation = translator.translate(english_text)
-    return french_translation
+    french_text = MyMemoryTranslator(source='en', target='fr').translate(english_text)
+    print(french_text)
+    return french_text
 def french_to_english(french_text):
     """
     Translate the given French text to Englsih
     """
-    translator = GoogleTranslator(source='fr', target='en')
-    english_translation = translator.translate(french_text)
-    return english_translation
+    englsih_text = MyMemoryTranslator(source='fr', target='en').translate(french_text)
+    print(englsih_text)
+    return englsih_text
